@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: beige;
+}
+/* header */
+header {
+  display: flex;
+  height: 20svh;
+  width: 96svw;
+
+  justify-content: flex-start;
+  margin: 20px;
+  padding: 20px;
+  gap: 350px;
+}
+header :first-child {
+  height: 15svh;
+}
+.building {
+  width: 800px;
+}
+main > div {
+  padding-top: 80px;
+  font-size: 30px;
+  text-align: center;
+  animation-name: linear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.breakfast {
+  padding-top: 100px;
+}
+.breakfast > h2 {
+  font-size: 50px;
+  text-align: center;
+}
+.coffe {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(5, 140px);
+  gap: 20px;
+}
+.coffe1 {
+  grid-column: 4/8;
+  grid-row: 1/4;
+  font-size: 20px;
+  padding: 40px;
+}
+.coffe2 {
+  grid-column: 5/-1;
+  grid-row: 5/6;
+
+  font-size: 20px;
+  padding: 40px;
+}
+.desayuno {
+  width: 400px;
+  height: 400px;
+  padding-top: 40px;
+  border-radius: 100%;
+  animation-name: image-effect;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.cafe {
+  width: 500px;
+  position: absolute;
+  right: 0px;
+  animation-name: back;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+/*animations*/
+@keyframes linear {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 350px;
+  }
+}
+@keyframes image-effect {
+  0% {
+    margin-left: 0%;
+  }
+  25% {
+    margin-left: 25%;
+    filter: grayscale();
+  }
+}
+@keyframes back {
+  from {
+    width: 400px;
+    margin-right: 0px;
+  }
+  75% {
+    margin-right: 700px;
+  }
+  to {
+    width: 500px;
+  }
+}
+
+/*responsive*/
+@media (max-width: 600px) {
+  header {
+    display: inline-block;
+    height: 20svh;
+    width: auto;
+    margin: 20px;
+    padding: 20px;
+    gap: 20px;
+  }
+  header > img {
+    width: auto;
+  }
+  main > div > h1 {
+    font-size: 40px;
+    text-align: end;
+    min-width: 600px;
+  }
+}
